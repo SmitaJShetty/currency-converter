@@ -1,0 +1,11 @@
+FROM hayd/alpine-deno:1.3.0
+
+WORKDIR /app
+
+EXPOSE 4000
+
+USER deno
+
+ADD . . 
+
+CMD ["run","--allow-net","router.ts"]
