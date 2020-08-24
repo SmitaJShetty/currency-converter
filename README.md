@@ -1,1 +1,1 @@
-# currency-conveter
+# currency-converter
