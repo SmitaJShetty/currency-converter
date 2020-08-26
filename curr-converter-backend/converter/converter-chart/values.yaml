@@ -1,0 +1,15 @@
+replicaCount: 1
+
+deploymentName: currency-converter-api-deployment
+
+appName: currency-converter-api
+
+imagePath: gcr.io/curr-converter-23009/currency-converter-api-image:v1
+
+portNumber: 4000
+
+loadBalancer: {
+    port: 8080,
+    targetPort: 4000,
+    protocol: TCP
+}

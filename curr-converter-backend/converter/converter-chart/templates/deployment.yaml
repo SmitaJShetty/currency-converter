@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deploymentName}}
+spec:
+  replicas: {{ .Values.replicaCount}}
+  selector:
+     matchLabels: 
+        app: {{ .Values.appName }}
+  template:
+    metadata:
+      labels: # labels to select/identify the deployment
+        app: {{ .Values.appName }}
+    spec:     # pod spec                  
+      containers: 
+      - name: {{ .Values.appName}}
+        image: {{ .Values.imagePath}} # image we pushed
+        ports:
+        - containerPort: {{.Values.portNumber}}
