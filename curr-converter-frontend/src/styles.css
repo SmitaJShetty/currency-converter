@@ -22,7 +22,7 @@ body{
 .container {
     margin: 30px auto;
     width: 100%;
-    border: 1px solid #2ecc71;
+    border: 1px solid darkgreen;
 }
 
 .header {
@@ -32,6 +32,7 @@ body{
     font-weight: bold;
     font-size: large;
     padding: 25px;
+    color: darkgreen;
 }
 
 h1 {
@@ -53,40 +54,25 @@ h4 {
 .inc-exp-container > div {
     flex: 1;
     text-align: left;
-}
-
-.inc-exp-container > div:first-of-type {
-    border-right: 1px solid #dedede;
-}
-
-.money {
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin: 5px 0;
-}
-
-.money.plus {
-    color: #2ecc71;
-}
-
-.money.minus {
-    color: #c0392b;
+    padding: 0px 0px 10px 0px;
 }
 
 label {
     display: inline-block;
-    margin: 10px ;
+    margin: 5px ;
     text-align: left;
 }
 
 label > span {
-    padding: 30px;
+    padding: 10px;
 }
 
 .sign {
-    width: 50px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     display: inline-block;
+    font-weight: bold;
+    color: chocolate;
 }
 
 input[type='number'] {
@@ -94,11 +80,12 @@ input[type='number'] {
     border-radius: 2px;
     font-size: 16px;
     padding: 10px;
+    font-family: sans-serif;
 }
 
 .btn {
     cursor: pointer;
-    background-color: #2ecc71;
+    background-color:darkgreen;
     box-shadow: var(--box-shadow);
     color: #fff;
     border: 0;
@@ -133,10 +120,7 @@ input[type='number'] {
     margin: 10px 0;
 }
 
-.select .plus{
-    border-right: 5px solid #2ecc71;
-}
-
-.select li.minus {
-    border-right: 5px solid #c0392b;
+.result {
+    font-family: sans-serif;
+    color: chocolate
 }

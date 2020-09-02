@@ -85,7 +85,7 @@ export default function Converter(){
                         return <option key={k}>{k}</option>
                     })}
                     </select></span>
-                    <span>{result}</span>
+                    <span className="result">{roundNum(result)}</span>
             </label>
         );
     }
@@ -105,4 +105,8 @@ export default function Converter(){
 
       console.log(result);
       return result;
+  }
+
+  const roundNum = (num) =>{
+      return Math.round((num+Number.EPSILON)*100)/100;
   }
