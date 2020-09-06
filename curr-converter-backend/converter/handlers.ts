@@ -31,10 +31,6 @@ export const getConversion = async (ctx:any):Promise<any> =>{
     ctx.response.body=result;
 }
 
-const validateParams = (params:any) =>{
-  return util.isNullOrUndefined(params);
-}
-
 export const getAllSymbols = async(ctx:any):Promise<any> => {
     //invoke external api
     let response, result = null;

@@ -1,0 +1,98 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/limit-ranger: 'LimitRanger plugin set: cpu request for container
+      currency-converter-api'
+  creationTimestamp: "2020-08-25T06:06:10Z"
+  generateName: currency-converter-api-deployment-76b88f4876-
+  labels:
+    app: currency-converter-api
+    pod-template-hash: 76b88f4876
+  name: currency-converter-api-deployment-76b88f4876-7dk47
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: currency-converter-api-deployment-76b88f4876
+    uid: d16a4bba-1cd1-4b17-8565-1fc566758434
+  resourceVersion: "397108"
+  selfLink: /api/v1/namespaces/default/pods/currency-converter-api-deployment-76b88f4876-7dk47
+  uid: e10b9fc6-2fa3-450d-9ec4-9f6e28ce702e
+spec:
+  containers:
+  - image: gcr.io/curr-converter-23009/currency-converter-api-image:v1
+    imagePullPolicy: IfNotPresent
+    name: currency-converter-api
+    ports:
+    - containerPort: 4000
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 100m
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-7mc87
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: gke-currency-converter-c-default-pool-d9cece6d-dc02
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-7mc87
+    secret:
+      defaultMode: 420
+      secretName: default-token-7mc87
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2020-08-25T06:06:10Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2020-08-25T06:06:13Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2020-08-25T06:06:13Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2020-08-25T06:06:10Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://b613178b860c1d7a8da6db44fb3ed38bbea31fc40ffc6b946f03931f4e821944
+    image: gcr.io/curr-converter-23009/currency-converter-api-image:v1
+    imageID: docker-pullable://gcr.io/curr-converter-23009/currency-converter-api-image@sha256:0ea8f184050dbec0a6bcc18b11053d788e90f830f0891928596607876f6ae2d4
+    lastState: {}
+    name: currency-converter-api
+    ready: true
+    restartCount: 0
+    state:
+      running:
+        startedAt: "2020-08-25T06:06:12Z"
+  hostIP: 10.138.0.4
+  phase: Running
+  podIP: 10.16.0.14
+  qosClass: Burstable
+  startTime: "2020-08-25T06:06:10Z"
