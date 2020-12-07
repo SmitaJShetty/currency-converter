@@ -7,7 +7,7 @@ const config={
         SUBJECT_TEMPLATE:`Notification alert for stock <StockSymbol>`,
         FROM:"testfrom@test.com",
     },
-    Twilio_Api_key: "SG.bpuCOc0zEQl2OTO86TfVwbg.vVbvDNGjdcTcdLHdviWJnhd9NX2yEEv-cOD8C8nsdeI"
+    Twilio_Api_key: "REDACTED"
 }
 
 export default config;
